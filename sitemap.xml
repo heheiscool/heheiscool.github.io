@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://heheiscool.github.io/categories/</loc>
+    <loc>https://heheiscool.github.io/posters/</loc>
+    <lastmod>2016-03-08T21:07:13+01:00</lastmod>
   </url><url>
-    <loc>http://heheiscool.github.io/</loc>
+    <loc>https://heheiscool.github.io/categories/</loc>
   </url><url>
-    <loc>http://heheiscool.github.io/tags/</loc>
+    <loc>https://heheiscool.github.io/</loc>
+  </url><url>
+    <loc>https://heheiscool.github.io/tags/</loc>
   </url>
 </urlset>
