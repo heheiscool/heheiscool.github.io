@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="canonical" href="https://heheiscool.github.io/posters/shortcodes/childpages/">
+    <link rel="alternate" type="application/rss+xml" href="https://heheiscool.github.io/posters/mystudy/index.xml" title="Material Docs" />
+    <link rel="canonical" href="https://heheiscool.github.io/posters/mystudy/">
 
     <title>
         
-        Childpages | Material Docs
+        hugo文档管理工具 | Material Docs
         
     </title>
 
@@ -36,6 +37,9 @@
         </div>
         
     </div>
+    <div class="feed-icons">
+            <a href="https://heheiscool.github.io/posters/mystudy/index.xml"><img src="/img/feed-icon.svg" alt="RSS feed" /></a>
+        </div>
     </nav>
 <div class="container-fluid">
             <div class="row">
@@ -79,7 +83,7 @@
         
         <a class="nav-link p-0" href="/posters/configuration/"><h6>Configuration</h6></a>
     </li>
-    <li data-nav-id="/posters/shortcodes/" class="nav-item my-1 parent haschildren
+    <li data-nav-id="/posters/shortcodes/" class="nav-item my-1 haschildren
         ">
         
         <a class="nav-link p-0" href="/posters/shortcodes/"><h6>Shortcodes</h6></a>
@@ -96,7 +100,7 @@
                     Buttons
                 </a>
         </li>
-        <li data-nav-id="/posters/shortcodes/childpages/" class="nav-item my-1 active">
+        <li data-nav-id="/posters/shortcodes/childpages/" class="nav-item my-1">
                 
                  <a href="/posters/shortcodes/childpages/" class="nav-link p-0">
                     Childpages
@@ -140,7 +144,7 @@
         </li>
         </ul>
     </li>
-    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 haschildren
+    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 parent active haschildren
         ">
         
         <a class="nav-link p-0" href="/posters/mystudy/"><h6>hugo文档管理工具</h6></a>
@@ -198,50 +202,42 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents">
-  <ul>
-    <li><a href="#usage">Usage</a></li>
-  </ul>
-</nav>
+	<nav id="TableOfContents"></nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
 
-<h1>Childpages</h1>
+<h1>hugo文档管理工具</h1>
 
-<p>The childpages shortcode allows you to show a list of sub-pages of the current page. For example, the <em>Getting started</em> page of this documentation has three child pages: <em>Installation</em>, <em>Configuration</em> and <em>Creating content</em>. Placing the childpages shortcode in the <em>Getting started</em> page will place a create a list of these sub-pages in that page.</p>
-<h2 id="usage">Usage</h2>
-<p>Simply place the following shortcode on the page
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_4cec572848">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_4cec572848">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
-{{&lt; <span style="color:#f92672">childpages</span> &gt;}}
-
-</code></pre></div>
-    </div>
-</div>
-
-
-
-</p>
+<p>新建了heheiscool.github.io的git网页地址</p>
+<p>只需要将rep文件拉到hugo中public去做管理即可</p>
+<p>hugo可以将md文件生成漂亮的文档模版</p>
+<p>1、brew安装</p>
+<p>2、hugo version</p>
+<p>3、创建一个新的网址</p>
+<p>hugo new site quickstart</p>
+<p>4、添加一个主题</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd quickstart 
+git init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+</code></pre></div><p>配置config</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo theme <span style="color:#f92672">=</span> <span style="color:#ae81ff">\&#34;</span>ananke<span style="color:#ae81ff">\&#34;</span> &gt;&gt; config.toml
+</code></pre></div><p>5、添加内容</p>
+<p>Content/posts目录中添加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new posts/my-first-post.md
+</code></pre></div><p>6、Start the Hugo server</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo server -D
+</code></pre></div><p>7、Customize the Theme 定制主题</p>
+<p>对目前选的主题不太满意，应该有其他方法使用配置更好的主题</p>
+<p><strong>主题中有对md的格式，平时书写的时候可以模仿</strong></p>
+<p>8、Build static pages 生成静态网页</p>
+<p>Output will be in <code>./public/</code> directory by default</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo -D
+</code></pre></div><p>到public目录中上传所有文件：</p>
+<p>git add .</p>
+<p>git commit -m &ldquo;++&rdquo;</p>
+<p>git push -u origin main</p>
 
 
     
@@ -253,8 +249,8 @@
 
     <h4 class="text-white text-center">Read more</h4>
 
-    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/shortcodes/buttons/" title="Buttons"><i class="fas fa-chevron-left p-1"></i>Buttons</a>
-        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/shortcodes/code/" title="Code">Code<i class="fas fa-chevron-right p-1"></i></a>
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/shortcodes/table/" title="Table"><i class="fas fa-chevron-left p-1"></i>Table</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" title="2021-10-12javascript核心原理笔记">2021-10-12javascript核心原理笔记<i class="fas fa-chevron-right p-1"></i></a>
     </div>
 </div>
 

@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="canonical" href="https://heheiscool.github.io/posters/shortcodes/childpages/">
+    <link rel="canonical" href="https://heheiscool.github.io/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/">
 
     <title>
         
-        Childpages | Material Docs
+        2021-10-12javascript核心原理笔记 | Material Docs
         
     </title>
 
@@ -79,7 +79,7 @@
         
         <a class="nav-link p-0" href="/posters/configuration/"><h6>Configuration</h6></a>
     </li>
-    <li data-nav-id="/posters/shortcodes/" class="nav-item my-1 parent haschildren
+    <li data-nav-id="/posters/shortcodes/" class="nav-item my-1 haschildren
         ">
         
         <a class="nav-link p-0" href="/posters/shortcodes/"><h6>Shortcodes</h6></a>
@@ -96,7 +96,7 @@
                     Buttons
                 </a>
         </li>
-        <li data-nav-id="/posters/shortcodes/childpages/" class="nav-item my-1 active">
+        <li data-nav-id="/posters/shortcodes/childpages/" class="nav-item my-1">
                 
                  <a href="/posters/shortcodes/childpages/" class="nav-link p-0">
                     Childpages
@@ -140,12 +140,12 @@
         </li>
         </ul>
     </li>
-    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 haschildren
+    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 parent haschildren
         ">
         
         <a class="nav-link p-0" href="/posters/mystudy/"><h6>hugo文档管理工具</h6></a>
         <ul class="list-unstyled ml-2">
-        <li data-nav-id="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" class="nav-item my-1">
+        <li data-nav-id="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" class="nav-item my-1 active">
                 
                  <a href="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" class="nav-link p-0">
                     2021-10-12javascript核心原理笔记
@@ -200,7 +200,11 @@
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
 	<nav id="TableOfContents">
   <ul>
-    <li><a href="#usage">Usage</a></li>
+    <li>
+      <ul>
+        <li><a href="#lhs与rhs-非常饶舌">LHS与RHS 非常饶舌</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
@@ -208,40 +212,56 @@
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
 
-<h1>Childpages</h1>
+<h1>2021-10-12javascript核心原理笔记</h1>
 
-<p>The childpages shortcode allows you to show a list of sub-pages of the current page. For example, the <em>Getting started</em> page of this documentation has three child pages: <em>Installation</em>, <em>Configuration</em> and <em>Creating content</em>. Placing the childpages shortcode in the <em>Getting started</em> page will place a create a list of these sub-pages in that page.</p>
-<h2 id="usage">Usage</h2>
-<p>Simply place the following shortcode on the page
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_4cec572848">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_4cec572848">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
-{{&lt; <span style="color:#f92672">childpages</span> &gt;}}
-
-</code></pre></div>
-    </div>
-</div>
-
-
-
-</p>
+<p>date: 2021-10-13T10:06:52+08:00</p>
+<p>draft: true</p>
+<p>由delete 0;开始思考</p>
+<p>作者从表像出发，分析其本质，推断出delete的原始语法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">delete</span> <span style="color:#a6e22e">UnaryExpression</span>
+</code></pre></div><ul>
+<li>JavaScript 程序中的一段源代码在执行之前会经历三个步骤，统称为 <code>编译</code></li>
+</ul>
+<blockquote>
+<ol>
+<li>分词/词法分析</li>
+<li>解析/语法分析</li>
+<li>代码生成</li>
+</ol>
+</blockquote>
+<ul>
+<li>先看原书对一个赋值操作的拆解说明：</li>
+</ul>
+<blockquote>
+<p>变量的赋值操作会执行两个动作，首先编译器会在当前作用域中声明一个变量（如果之前没有声明过），然后在运行时引擎会在作用域中查找该变量，如果能够找到就会对它赋值。 &mdash; 《你不知道的JavaScript（上卷）》 P7</p>
+</blockquote>
+<ul>
+<li>而要讲的 <code>LHS</code> 和 <code>RHS</code> 就是上面说的对变量的两种查找操作，查找的过程是由作用域（词法作用域）进行协助，在编译的第二步中执行。</li>
+</ul>
+<h3 id="lhs与rhs-非常饶舌">LHS与RHS 非常饶舌</h3>
+<p>Left hand side 赋值操作左侧</p>
+<p>Right hand side 赋值操作右侧</p>
+<p><em><strong>应用的本质：变量的存储容器，无论是LHS查询还是RHS查询都是针对引擎的查询方式。RHS也能理解为取到原值(或查到变量值或赋值操作源头)，LHS查询目的是给指定应用赋值(查到赋值操作目标)</strong></em></p>
+<p>总结：判断是RHS查询看是否是找取值源头，判断是否是LHS就看值确定赋值给谁或变量名在等号左边！</p>
+<p>栗子：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>)
+</code></pre></div><p>a进行了RHS操作，此时没有对a赋值，而是直接引用了a，我们需要查询并拿到a的值才能传递给参数</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">a</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>	
+</code></pre></div><p>引擎对a进行了左查询，在作用域集合中找a，然后把a变量值赋给查找到的a</p>
+<p>参考原书中文版P12，英文版见 <a href="https://link.segmentfault.com/?enc=DEnRrvTYaKz3SeIIaDvKEA%3D%3D.WHTfQFSh6G8SJGhnDUWt6LnclkJrIjqlfOSF2urD5MYQyxV0dH98DT1zVtlmbIXOe2m4w4sJcCXbk4k0%2BVXf9GyUYakwihE3zeK7QDELSYnnOP6WPylE%2B5yy0s2j2yVJ8220n%2FQbL1MnR%2BEPCSNqPQ%3D%3D">github</a></p>
+<ul>
+<li>作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。</li>
+<li>如果查找的目的是对变量进行赋值，就会使用 LHS 查询；如果目的是获取变量的值，就会用 RHS 查询。</li>
+<li><code>赋值操作</code>会导致 LHS 查询。 <code>= 操作符</code>或调用函数时传入参数的操作都会导致关联作用域的<code>赋值操作</code>, 即都会导致 LHS 查询。</li>
+<li>JavaScript 引擎首先会在代码执行前对其进行编译，在这个过程中，像<code>var a = 2</code> 这样的声明会被分解成两个独立的步骤：
+<ol>
+<li>首先，<code>var a</code>在其作用域中声明新变量。这会在最开始的阶段，也就是代码执行前进行。</li>
+<li>接下来，<code>a = 2</code>会查询（LHS查询）变量 a 并对其进行赋值。</li>
+</ol>
+</li>
+<li>LHS 和 RHS 查询都会在当前执行作用域中开始，如果有需要（也就是说它们没有找到所需的标识符），就会向上级作用域继续查找目标标识符，这样每次上升一级作用域，最后到达全局作用域，无论找到或没找到都将停止。</li>
+<li>不成功的 RHS 引用会导致抛出 <code>ReferenceError</code> 异常。不成功的 LHS 引用会导致自动隐式地创建一个全局变量（非严格模式下），该变量使用 LHS 引用的目标作为标识符，或者抛出 <code>ReferenceError</code> 异常（严格模式下）</li>
+</ul>
 
 
     
@@ -253,8 +273,8 @@
 
     <h4 class="text-white text-center">Read more</h4>
 
-    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/shortcodes/buttons/" title="Buttons"><i class="fas fa-chevron-left p-1"></i>Buttons</a>
-        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/shortcodes/code/" title="Code">Code<i class="fas fa-chevron-right p-1"></i></a>
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/mystudy/" title="hugo文档管理工具"><i class="fas fa-chevron-left p-1"></i>hugo文档管理工具</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/mystudy/2021-10-15%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A005-truffle%E4%B8%8Ejs/" title="2021-10-15区块链-solidity学习05">2021-10-15区块链-solidity学习05<i class="fas fa-chevron-right p-1"></i></a>
     </div>
 </div>
 

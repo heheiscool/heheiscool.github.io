@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="canonical" href="https://heheiscool.github.io/posters/mystudy/2021-10-15%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A005-truffle%E4%B8%8Ejs/">
+
+    <title>
+        
+        2021-10-15区块链-solidity学习05 | Material Docs
+        
+    </title>
+
+    
+    <link href="https://heheiscool.github.io/css/fontawesome.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://heheiscool.github.io/css/ace.min.css">
+
+    
+
+    
+    
+        
+    
+
+</head>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow sticky-top" id="navbarMain">
+    <div class="container">
+        <div>
+            <a class="navbar-brand" href="/">
+                
+                Material Docs
+            </a>
+        </div>
+        
+    </div>
+    </nav>
+<div class="container-fluid">
+            <div class="row">
+
+                <div class="docs-sidenav order-0 col-12 col-md-3 col-lg-2 col-xl-2 position-sticky border-right"><nav class="navbar navbar-expand-md navbar-light pl-0">
+    <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#sidenav-left-collapse" aria-controls="sidenav-left-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse align-items-start flex-column" id="sidenav-left-collapse">
+            <form class="form-inline my-2 my-lg-0 searchbox">
+                <input class="form-control mr-sm-2 w-100" data-search-input id="search-by" type="text" placeholder="Search">
+            </form>
+         <ul class="navbar-nav flex-column pt-3">
+    <li data-nav-id="/posters/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/posters/"><h6>Ace documentation</h6></a>
+        <ul class="list-unstyled ml-2">
+    <li data-nav-id="/posters/getting-started/" class="nav-item my-1 haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/posters/getting-started/"><h6>Getting started</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/posters/getting-started/installation/" class="nav-item my-1">
+                
+                 <a href="/posters/getting-started/installation/" class="nav-link p-0">
+                    Installation
+                </a>
+        </li>
+        <li data-nav-id="/posters/getting-started/usage/" class="nav-item my-1">
+                
+                 <a href="/posters/getting-started/usage/" class="nav-link p-0">
+                    Usage
+                </a>
+        </li>
+        </ul>
+    </li>
+    <li data-nav-id="/posters/configuration/" class="nav-item my-1
+        ">
+        
+        <a class="nav-link p-0" href="/posters/configuration/"><h6>Configuration</h6></a>
+    </li>
+    <li data-nav-id="/posters/shortcodes/" class="nav-item my-1 haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/posters/shortcodes/"><h6>Shortcodes</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/posters/shortcodes/alerts/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/alerts/" class="nav-link p-0">
+                    Alerts
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/buttons/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/buttons/" class="nav-link p-0">
+                    Buttons
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/childpages/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/childpages/" class="nav-link p-0">
+                    Childpages
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/code/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/code/" class="nav-link p-0">
+                    Code
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/collapse/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/collapse/" class="nav-link p-0">
+                    Collapse
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/doublecode/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/doublecode/" class="nav-link p-0">
+                    Doublecode
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/lead/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/lead/" class="nav-link p-0">
+                    Lead
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/panel/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/panel/" class="nav-link p-0">
+                    Panel
+                </a>
+        </li>
+        <li data-nav-id="/posters/shortcodes/table/" class="nav-item my-1">
+                
+                 <a href="/posters/shortcodes/table/" class="nav-link p-0">
+                    Table
+                </a>
+        </li>
+        </ul>
+    </li>
+    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 parent haschildren
+        ">
+        
+        <a class="nav-link p-0" href="/posters/mystudy/"><h6>hugo文档管理工具</h6></a>
+        <ul class="list-unstyled ml-2">
+        <li data-nav-id="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" class="nav-item my-1">
+                
+                 <a href="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" class="nav-link p-0">
+                    2021-10-12javascript核心原理笔记
+                </a>
+        </li>
+        <li data-nav-id="/posters/mystudy/2021-10-15%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A005-truffle%E4%B8%8Ejs/" class="nav-item my-1 active">
+                
+                 <a href="/posters/mystudy/2021-10-15%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A005-truffle%E4%B8%8Ejs/" class="nav-link p-0">
+                    2021-10-15区块链-solidity学习05
+                </a>
+        </li>
+        <li data-nav-id="/posters/mystudy/2021-10-11%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="nav-item my-1">
+                
+                 <a href="/posters/mystudy/2021-10-11%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="nav-link p-0">
+                    hugo文档管理工具
+                </a>
+        </li>
+        <li data-nav-id="/posters/mystudy/2021-09-21%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A001/" class="nav-item my-1">
+                
+                 <a href="/posters/mystudy/2021-09-21%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A001/" class="nav-link p-0">
+                    区块链-solidity学习01
+                </a>
+        </li>
+        <li data-nav-id="/posters/mystudy/2021-10-09%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A002/" class="nav-item my-1">
+                
+                 <a href="/posters/mystudy/2021-10-09%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A002/" class="nav-link p-0">
+                    区块链-solidity学习02
+                </a>
+        </li>
+        <li data-nav-id="/posters/mystudy/2021-10-10%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A003/" class="nav-item my-1">
+                
+                 <a href="/posters/mystudy/2021-10-10%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A003/" class="nav-link p-0">
+                    区块链-solidity学习03
+                </a>
+        </li>
+        <li data-nav-id="/posters/mystudy/2021-10-10%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A004-%E5%8A%A0%E5%AF%86%E7%8C%AB/" class="nav-item my-1">
+                
+                 <a href="/posters/mystudy/2021-10-10%E5%8C%BA%E5%9D%97%E9%93%BE-solidity%E5%AD%A6%E4%B9%A004-%E5%8A%A0%E5%AF%86%E7%8C%AB/" class="nav-link p-0">
+                    区块链-solidity学习04-加密猫
+                </a>
+        </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+
+</div>
+                <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#创建用户接口和智能合约交互">创建用户接口和智能合约交互</a></li>
+  </ul>
+</nav>
+</div>
+</div>
+                <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
+                
+
+<h1>2021-10-15区块链-solidity学习05</h1>
+
+<p>与区块链合约的交互有两种形式，一种是直接利用用户的私钥直接链接节点操作，一种是通过浏览器中的钱包插件交互。这里是第二种。</p>
+<p>1、npm查询所有全局包</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">list</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">g</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">depth</span> <span style="color:#ae81ff">0</span>
+</code></pre></div><p>2、truffle 是一个以太坊的开发框架：</p>
+<ul>
+<li>内置的智能合约编译，链接，部署和二进制文件的管理。</li>
+<li>快速开发下的自动合约测试。</li>
+<li>脚本化的，可扩展的部署与发布框架。</li>
+<li>部署到不管多少的公网或私网的网络环境管理功能</li>
+<li>使用EthPM&amp;NPM提供的包管理，使用<a href="https://github.com/ethereum/EIPs/issues/190">ERC190</a>标准。</li>
+<li>与合约直接通信的直接交互控制台（写完合约就可以命令行里验证了）。</li>
+<li>可配的构建流程，支持紧密集成。</li>
+<li>在Truffle环境里支持执行外部的脚本。</li>
+</ul>
+<pre tabindex="0"><code> npm install -g truffle
+</code></pre><p>3、有一个默认案例可以参考</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">truffle unbox pet-shop
+
+Commands:
+
+  Compile:        truffle compile
+  Migrate:        truffle migrate
+  Test contracts: truffle test
+  Run dev server: npm run dev
+</code></pre></div><p>创建一个工程：</p>
+<pre tabindex="0"><code>$ truffle init
+</code></pre><p>4、目录结构</p>
+<ul>
+<li>
+<p><code>contracts/</code>: Contains the <a href="https://solidity.readthedocs.io/">Solidity</a> source files for our smart contracts. There is an important contract in here called <code>Migrations.sol</code>, which we&rsquo;ll talk about later.</p>
+</li>
+<li>
+<p><code>migrations/</code>: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.</p>
+</li>
+<li>
+<p><code>test/</code>: Contains both JavaScript and Solidity tests for our smart contracts</p>
+</li>
+<li>
+<p><code>truffle-config.js</code>: Truffle configuration file</p>
+</li>
+<li>
+<p>app/ - 你的应用文件运行的默认目录。这里面包括推荐的javascript文件和css样式文件目录，但你可以完全决定如何使用这些目录。</p>
+</li>
+<li>
+<p>contract/ - Truffle默认的合约文件存放地址。</p>
+</li>
+<li>
+<p>migrations/ - 存放发布脚本文件</p>
+</li>
+<li>
+<p>test/ - 用来测试应用和合约的测试文件</p>
+</li>
+<li>
+<p>truffle.js - Truffle的配置文件</p>
+</li>
+</ul>
+<p>5、合约写好后，直接编译：</p>
+<pre tabindex="0"><code>truffle compile
+</code></pre><p>Truffle仅默认编译自上次编译后被修改过的文件，来减少不必要的编译。如果你想编译全部文件，可以使用<code>--compile-all</code>选项。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">truffle compile --compile-all
+</code></pre></div><p>6、编译好后部署到链上：</p>
+<pre tabindex="0"><code>truffle migrate
+</code></pre><p>编译之后，就可以部署到区块链上。
+在migrations文件夹下已经有一个1_initial_migration.js<a href="https://learnblockchain.cn/docs/truffle/getting-started/running-migrations.html">部署脚本</a>，用来部署Migrations.sol合约。
+Migrations.sol 用来确保不会部署相同的合约。</p>
+<p>7、测试，根目录中下的test写上测试合约</p>
+<pre tabindex="0"><code>truffle test
+</code></pre><p>8、javascript中可以使用web3、truffle-contract库与以太坊达成交互</p>
+<p><strong>这里涉及一个问题，truffle-contract应该是没有更新了，所以truffle-contract库和新的web3库可能会冲突，导致无法使用！！！</strong></p>
+<h2 id="创建用户接口和智能合约交互">创建用户接口和智能合约交互</h2>
+<p>新的Dapp浏览器或MetaMask的新版本，注入了一个<code>ethereum</code> 对象到<code>window</code>对象里， 应该优先使用<code>ethereum</code>来构造web3， 同时使用<code>ethereum.enable()</code>来请求用户授权访问链接账号。如下使用两种方式均可：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-solidity" data-lang="solidity">async init(){
+    <span style="color:#75715e">// if(typeof window.web3!==&#39;undefined&#39;){
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   this.web3Provider = window.web3.currentProvider;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// }else{
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//   alert(&#39;请安装以太坊钱包插件&#39;)
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// this.web3 = new web3(this.web3Provider);
+</span><span style="color:#75715e"></span>      <span style="color:#75715e">// Modern dapp browsers...
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">if</span> (window.ethereum) {
+          App.web3Provider <span style="color:#f92672">=</span> window.ethereum;
+          <span style="color:#66d9ef">try</span> {
+              <span style="color:#75715e">// Request account access
+</span><span style="color:#75715e"></span>              await window.ethereum.enable();
+          } <span style="color:#66d9ef">catch</span> (error) {
+              <span style="color:#75715e">// User denied account access...
+</span><span style="color:#75715e"></span>              console.error(<span style="color:#e6db74">&#34;User denied account access&#34;</span>)
+          }
+      }
+<span style="color:#75715e">// Legacy dapp browsers...
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (window.web3) {
+          App.web3Provider <span style="color:#f92672">=</span> window.web3.currentProvider;
+      }
+<span style="color:#75715e">// If no injected web3 instance is detected, fall back to Ganache
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">else</span> {
+          App.web3Provider <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Web3.providers.HttpProvider(<span style="color:#e6db74">&#39;http://localhost:7545&#39;</span>);
+      }
+      this.web3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Web3(App.web3Provider);
+
+    this.initAdoption();
+  }
+</code></pre></div><p>这里使用了truffle，也可以直接使用web3.js操作</p>
+<p>错误1:</p>
+<p>应该是原来的web3的api库更新的缘故，新库很多函数接口没法使用</p>
+<p>当前页面链接到web3 节点，查询当前账户</p>
+<p>![image-20211017165436618](/Users/chenyang/Library/Application Support/typora-user-images/image-20211017165436618.png)</p>
+<p>提示：</p>
+<p>You are accessing the MetaMask window.web3.currentProvider shim. This property is deprecated; use window.ethereum instead. For details, see: <a href="https://docs.metamask.io/guide/provider-migration.html#replacing-window-web">https://docs.metamask.io/guide/provider-migration.html#replacing-window-web</a></p>
+<p>MetaMask: &lsquo;ethereum.enable()&rsquo; is deprecated and may be removed in the future. Please use the &lsquo;eth_requestAccounts&rsquo; RPC method instead.</p>
+<p>错误2  无法获取合约对象：</p>
+<p><strong>一个基于truffle-contract库实现的以太坊solidity智能合约调用案例</strong></p>
+<p>注意：truffle-contract库和web3.js使用nodej或import同时导入转码的时候会打架冲突！
+为此如果使用truffle-contract库来实现solidity调用,必须使用truffle-contract原生链的Web3对象！
+truffle-contract是truffle框架基于web3.js进一步封装使用更方便的库，目前truffle-contract的版本停留在web3.js 0.27版本</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 一个基于truffle-contract库实现的以太坊solidity智能合约调用案例！
+</span><span style="color:#75715e"> * 注意：truffle-contract库和web3.js使用nodej或import同时导入转码的时候会打架冲突！
+</span><span style="color:#75715e"> *      为此如果使用truffle-contract库来实现solidity调用,必须使用truffle-contract原生链的Web3对象！
+</span><span style="color:#75715e"> *      truffle-contract是truffle框架基于web3.js进一步封装使用更方便的库！
+</span><span style="color:#75715e"> * **/</span>
+ 
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">TruffleContract</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;truffle-contract&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">first_contract_json</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;../../truffle/build/contracts/FirstContract.json&#34;</span>);
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstContractWeb3</span> {
+    <span style="color:#a6e22e">constructor</span>() {
+        <span style="color:#75715e">// 创建一个truffle-contract实例,为了初始化合约对象以及拿到原生链上的Web对象！
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">contract</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TruffleContract</span>(<span style="color:#a6e22e">first_contract_json</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">init_web3_1_0_version</span>();
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">get_truffle_contract_init</span>();
+    }
+ 
+    <span style="color:#75715e">// web3对象初始化(仅兼容web3.js 1.0版本)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">init_web3_1_0_version</span>() {
+        <span style="color:#75715e">// truffle-contract库就是基于Web3对象封装的,这里的Web就是truffl-contract原生链上的Web对象！
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 这里不能用require或import的方式导入web.js库导入Web3,测试发现truffl-contract和web3.js会打架！
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Web3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">contract</span>.<span style="color:#a6e22e">web3</span>.<span style="color:#ae81ff">__</span><span style="color:#a6e22e">proto__</span>.<span style="color:#a6e22e">constructor</span>;
+        <span style="color:#75715e">// 如果浏览器安装了Metamask钱包(如：谷歌、火狐),那么Web3.givenProvider等于Metamask
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 如果浏览器没有安装或不支持Metamask,那么Web3.givenProvider等于null
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;判断浏览器是否启用Metamask插件的对象Web3.givenProvider结果为：&#34;</span>, <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">givenProvider</span>);
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;contract-Web3&#34;</span>, <span style="color:#a6e22e">Web3</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>(<span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">givenProvider</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">providers</span>.<span style="color:#a6e22e">HttpProvider</span>(<span style="color:#e6db74">&#39;http://127.0.0.1:8545&#39;</span>));
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;this.web3&#34;</span>,<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span>);
+    }
+ 
+ 
+    <span style="color:#75715e">//truffle-contract智能合约初始化函数！
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">get_truffle_contract_init</span>() {
+ 
+        <span style="color:#75715e">//  调用getInfo方法,call声明不改变合约状态！
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">contract</span>.<span style="color:#a6e22e">setProvider</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">currentProvider</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">contract</span>.<span style="color:#a6e22e">at</span>(<span style="color:#e6db74">&#39;0xc5df1c7cbd988293313e63826009c76da3d362d1&#39;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">instance</span>) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;instance&#39;</span>, <span style="color:#a6e22e">instance</span>);
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">getInfo</span>();
+        }).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">result</span>) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
+        }).<span style="color:#66d9ef">catch</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>) {
+            <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#39;ERROR! &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>);
+        });
+ 
+        <span style="color:#75715e">//  调用setInfo方法,sendTransaction声明要发送交易！
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">contract</span>.<span style="color:#a6e22e">deployed</span>().<span style="color:#a6e22e">then</span>( <span style="color:#66d9ef">function</span> ( <span style="color:#a6e22e">instance</span> ) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;instance&#39;</span>, <span style="color:#a6e22e">instance</span> );
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">setInfo</span>.<span style="color:#a6e22e">sendTransaction</span>( <span style="color:#e6db74">&#39;kirin&#39;</span>, <span style="color:#ae81ff">28</span>, { <span style="color:#e6db74">&#39;from&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;0x8da3228Fc3b423C9F5D657c2324f3aAB97B4D283&#39;</span> } );
+        } ).<span style="color:#a6e22e">then</span>( <span style="color:#66d9ef">function</span> ( <span style="color:#a6e22e">result</span> ) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">result</span> );
+        } ).<span style="color:#66d9ef">catch</span>( <span style="color:#66d9ef">function</span> ( <span style="color:#a6e22e">err</span> ) {
+            <span style="color:#75715e">// Easily catch all errors along the whole execution.
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#39;ERROR! &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span> );
+        } );
+    }
+}
+ 
+<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FirstContractWeb3</span>();
+ 
+ 
+</code></pre></div><p><strong>基于truffle-contract库之solidity事件与合约调用完整案例</strong></p>
+<p><a href="https://blog.csdn.net/weixin_43343144/article/details/88586076?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&amp;spm=1001.2101.3001.4242">https://blog.csdn.net/weixin_43343144/article/details/88586076?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&amp;spm=1001.2101.3001.4242</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 一个基于truffle-contract库实现的以太坊solidity智能合约调用案例！
+</span><span style="color:#75715e"> * 注意：truffle-contract库和web3.js使用nodej或import同时导入转码的时候会打架冲突！
+</span><span style="color:#75715e"> *      为此如果使用truffle-contract库来实现solidity调用,必须使用truffle-contract原生链的Web3对象！
+</span><span style="color:#75715e"> *      truffle-contract是truffle框架基于web3.js进一步封装使用更方便的库！
+</span><span style="color:#75715e"> * **/</span>
+ 
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">TruffleContract</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>( <span style="color:#e6db74">&#39;truffle-contract&#39;</span> );
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">first_contract_json</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>( <span style="color:#e6db74">&#39;@/truffle/build/contracts/FirstContract.json&#39;</span> );
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstContractWeb3</span> {
+    <span style="color:#a6e22e">constructor</span> () {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">from_addr</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;0x88D9C6F37E10A4B8801a06979ad6f60D91bA0a52&#39;</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">init_web3_1_0_version</span>();
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">get_truffle_contract_init</span>();
+    }
+ 
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 创建一个空合约truffle_contract,目的是拿到truffle_contract库中的Web3！
+</span><span style="color:#75715e">     * 这里不能直接require或import导入web3.js中的Web3,因为与truffle_contract不兼容,会报错！
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">get_Web3_from_truffle_contract</span> () {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">contract_empty</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TruffleContract</span>();
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * truffle-contract库就是基于Web3对象封装的,这里的Web就是truffl-contract原生链上的Web对象！
+</span><span style="color:#75715e">         * 这里不能用require或import的方式导入web.js库导入Web3,测试发现truffl-contract和web3.js会打架！
+</span><span style="color:#75715e">         * 这里用法等价于let Web3 = this.contract.web3.__proto__.constructor;
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">return</span> Object.<span style="color:#a6e22e">getPrototypeOf</span>( <span style="color:#a6e22e">contract_empty</span>.<span style="color:#a6e22e">web3</span> ).<span style="color:#a6e22e">constructor</span>;
+    }
+ 
+    <span style="color:#75715e">// web3对象初始化(仅兼容web3.js 1.0版本)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">init_web3_1_0_version</span> () {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">Web3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">get_Web3_from_truffle_contract</span>();
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;判断浏览器是否启用Metamask插件的对象Web3.givenProvider结果为：&#39;</span>, <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">givenProvider</span> );
+        <span style="color:#75715e">/**
+</span><span style="color:#75715e">         * 如果浏览器安装了Metamask钱包(如：谷歌、火狐),那么Web3.givenProvider等于Metamask
+</span><span style="color:#75715e">         * 如果浏览器没有安装或不支持Metamask,那么Web3.givenProvider等于null
+</span><span style="color:#75715e">         */</span>
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>( <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">givenProvider</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">providers</span>.<span style="color:#a6e22e">HttpProvider</span>( <span style="color:#e6db74">&#39;http://127.0.0.1:8545&#39;</span> ) );
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;this.web3对象：&#39;</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span> );
+    }
+ 
+ 
+    <span style="color:#75715e">// truffle-contract智能合约初始化函数！
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">get_truffle_contract_init</span> () {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">first_contract</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">TruffleContract</span>( <span style="color:#a6e22e">first_contract_json</span> );
+        <span style="color:#a6e22e">first_contract</span>.<span style="color:#a6e22e">setProvider</span>( <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">currentProvider</span> );
+ 
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">deployed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">first_contract</span>.<span style="color:#a6e22e">deployed</span>();
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">constract_instance</span>;
+ 
+        <span style="color:#a6e22e">deployed</span>.<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">instance</span> ) =&gt; {
+            <span style="color:#a6e22e">constract_instance</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">instance</span>;
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;合约实例constract_instance：&#39;</span>, <span style="color:#a6e22e">constract_instance</span> );
+ 
+            <span style="color:#75715e">//  调用getInfo方法,call声明不改变合约状态！
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">constract_instance</span>.<span style="color:#a6e22e">getInfo</span>.<span style="color:#a6e22e">call</span>();
+        } ).<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">result</span> ) =&gt; {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;getInfo返回结果:&#39;</span>, <span style="color:#a6e22e">result</span> );
+ 
+            <span style="color:#75715e">// 调用setInfo方法,sendTransaction发送交易,改变合约状态！
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 监听setInfo中的event事件！
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">constract_instance</span>.<span style="color:#a6e22e">setInfo</span>.<span style="color:#a6e22e">sendTransaction</span>( <span style="color:#e6db74">&#39;kirin&#39;</span>, <span style="color:#ae81ff">28</span>,
+                { <span style="color:#e6db74">&#39;from&#39;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">from_addr</span> } ).<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">result</span> ) =&gt; {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;setInfo发送成功返回结果：&#39;</span>, <span style="color:#a6e22e">result</span> );
+                <span style="color:#75715e">// 事件返回的数据会存放于result.logs[0].args对象中！
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;event返回结果:&#39;</span>, <span style="color:#a6e22e">result</span>);
+            } ).<span style="color:#66d9ef">catch</span>( ( <span style="color:#a6e22e">err</span> ) =&gt; {
+                <span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#39;ERROR! &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span> );
+            } );
+        } ).<span style="color:#66d9ef">catch</span>( ( <span style="color:#a6e22e">err</span> ) =&gt; {
+            <span style="color:#a6e22e">alert</span>( <span style="color:#e6db74">&#39;ERROR! &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span> );
+        } );
+    }
+}
+ 
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">contract</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FirstContractWeb3</span>();
+ 
+ 
+</code></pre></div><p><img src="https://img-blog.csdnimg.cn/20190315225337445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzE0NA==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/2019031522481638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzM0MzE0NA==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><strong>Vue+web3.js+solidity+truffle开发以太坊区块链合约部署全过程！（注意：这里没有使用truffle-contract库调用智能合约）</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> 
+ <span style="color:#f92672">*</span> <span style="color:#a6e22e">说明</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">Vue</span><span style="color:#f92672">+</span><span style="color:#a6e22e">truffle</span><span style="color:#f92672">+</span><span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">js</span>(<span style="color:#ae81ff">1.0</span><span style="color:#a6e22e">版本</span>)<span style="color:#a6e22e">开发的以太坊区块链案例</span><span style="color:#960050;background-color:#1e0010">！</span>
+ <span style="color:#f92672">*</span> <span style="color:#a6e22e">注意</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">本案例中没有使用truffle</span><span style="color:#f92672">-</span><span style="color:#a6e22e">contract库调用智能合约</span><span style="color:#960050;background-color:#1e0010">！</span>
+ <span style="color:#f92672">*</span> <span style="color:#a6e22e">关于使用truffle</span><span style="color:#f92672">-</span><span style="color:#a6e22e">contract库与solidity智能合约交互的案例后续分享新版本</span><span style="color:#960050;background-color:#1e0010">！</span>
+ 
+ 
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Web3</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;web3&#39;</span>;
+<span style="color:#75715e">// 导入FirstContract.sol智能合约的ABI编码数据！
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">first_contract_json</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;@/truffle/build/contracts/FirstContract.json&#39;</span>;
+ 
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstContractWeb3</span> {
+    <span style="color:#a6e22e">constructor</span> () {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">init_web3_1_0_version</span>();
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">initContract</span>();
+        <span style="color:#75715e">// this.initContract_deploy();
+</span><span style="color:#75715e"></span>    }
+ 
+    
+<span style="color:#75715e">// web3对象初始化(仅兼容web3.js 1.0版本)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">init_web3_1_0_version</span>() {
+        <span style="color:#75715e">// 如果浏览器安装了Metamask钱包(如：谷歌、火狐),那么Web3.givenProvider等于Metamask
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 如果浏览器没有安装或不支持Metamask,那么Web3.givenProvider等于null
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;判断浏览器是否启用Metamask插件的对象Web3.givenProvider结果为：&#34;</span>,<span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">givenProvider</span>);
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>(<span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">givenProvider</span> <span style="color:#f92672">||</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">providers</span>.<span style="color:#a6e22e">HttpProvider</span>(<span style="color:#e6db74">&#39;http://127.0.0.1:8545&#39;</span>));
+ 
+    }
+ 
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 1、初始化web3.eth.Contract合约
+</span><span style="color:#75715e">     * 2、直接调用truffle手动部署成功的合约实例(合约地址)
+</span><span style="color:#75715e">     * 注意：from发送账户务必注意两点：1、必须存在于区块链上; 2、浏览器访问Metamask的账户必须是发送地址账户！
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">initContract</span> () {
+        <span style="color:#75715e">// 基于原生的web3.eth.Contract对象来创建合约（调用合约的方法）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fist_contract</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">Contract</span>( <span style="color:#a6e22e">first_contract_json</span>.<span style="color:#a6e22e">abi</span>,
+            <span style="color:#e6db74">&#39;0xC5DF1c7cbd988293313e63826009c76dA3D362d1&#39;</span> );
+ 
+        <span style="color:#75715e">// 调用合约的只读方法，并在EVM中直接执行方法，不需要发送任何交易。因此不会改变合约的状态。
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fist_contract</span>.<span style="color:#a6e22e">methods</span>.<span style="color:#a6e22e">getInfo</span>().<span style="color:#a6e22e">call</span>().<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">result</span> ) =&gt; {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;get已经执行了&#39;</span> );
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">result</span> );
+        } );
+        <span style="color:#75715e">// 向合约发送交易来执行指定方法，将改变合约的状态(必须输入发送交易的账户地址,需要消耗gas)
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fist_contract</span>.<span style="color:#a6e22e">methods</span>.<span style="color:#a6e22e">setInfo</span>( <span style="color:#e6db74">&#39;kirin2019&#39;</span>, <span style="color:#ae81ff">18</span> ).<span style="color:#a6e22e">send</span>( { <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;0x88D9C6F37E10A4B8801a06979ad6f60D91bA0a52&#39;</span> } ).<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">result</span> ) =&gt; {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;set已经执行了&#39;</span> );
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">result</span> );
+        } );
+    }
+ 
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 1、初始化web3.eth.Contract合约
+</span><span style="color:#75715e">     * 2、调用合约的deploy()方法将其自动部署到区块链上！
+</span><span style="color:#75715e">     * 注意：from发送账户务必注意两点：1、必须存在于区块链上; 2、浏览器访问Metamask的账户必须是发送地址账户！
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">initContract_deploy</span> () {
+        <span style="color:#75715e">// 基于原生的web3.eth.Contract对象来创建合约（调用合约的方法）
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fist_contract</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">Contract</span>( <span style="color:#a6e22e">first_contract_json</span>.<span style="color:#a6e22e">abi</span> );
+ 
+        <span style="color:#75715e">// 这里是程序部署合约,一旦合约部署成功,其返回的Promise对象,将在成功部署后解析为新的合约实例。
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">fist_contract</span>.<span style="color:#a6e22e">deploy</span>( {
+            <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">first_contract_json</span>.<span style="color:#a6e22e">bytecode</span>,
+        } ).<span style="color:#a6e22e">send</span>( {
+            <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;0x88D9C6F37E10A4B8801a06979ad6f60D91bA0a52&#39;</span>,
+        } ).<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">instance</span> ) =&gt; {
+            <span style="color:#75715e">// 返回一个已经部署成功的合约实例！
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;instance&#39;</span>, <span style="color:#a6e22e">instance</span> );
+            <span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">methods</span>.<span style="color:#a6e22e">getInfo</span>().<span style="color:#a6e22e">call</span>().<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">result</span> ) =&gt; {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;get已经执行了&#39;</span> );
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">result</span> );
+            } ).<span style="color:#66d9ef">catch</span>( ( <span style="color:#a6e22e">error</span> ) =&gt; {
+                <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+            } );
+            <span style="color:#75715e">// 调用合约实例set方法
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">methods</span>.<span style="color:#a6e22e">setInfo</span>( <span style="color:#e6db74">&#39;kirin2019&#39;</span>, <span style="color:#ae81ff">18</span> ).<span style="color:#a6e22e">send</span>( { <span style="color:#a6e22e">from</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;0x88D9C6F37E10A4B8801a06979ad6f60D91bA0a52&#39;</span> } ).<span style="color:#a6e22e">then</span>( ( <span style="color:#a6e22e">result</span> ) =&gt; {
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#e6db74">&#39;set已经执行了&#39;</span> );
+                <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>( <span style="color:#a6e22e">result</span> );
+            } ).<span style="color:#66d9ef">catch</span>( ( <span style="color:#a6e22e">error</span> ) =&gt; {
+                <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">error</span>;
+            } );
+        });
+    }
+}
+ 
+<span style="color:#75715e">// 测试执行！
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">first_contract</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FirstContractWeb3</span>();
+ 
+ 
+</code></pre></div><p>错误3:</p>
+<p><em><strong>问题现象</strong></em></p>
+<p>控制台输入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">getBalance</span>(<span style="color:#e6db74">&#39;0xbef3eba933f54b182b3fd348e1825dd639398af1&#39;</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>)
+</code></pre></div><p>提示：</p>
+<p>![image-20211018182529585](/Users/chenyang/Library/Application Support/typora-user-images/image-20211018182529585.png)</p>
+<p><em><strong>原因</strong></em></p>
+<p>在系统中有两个web3对象，一个是自己定义的，一个是系统注入的web3</p>
+<p><em><strong>解决方案</strong></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">getBalance</span>(window.<span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">defaultAccount</span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>)
+</code></pre></div><p>错误4：</p>
+<p>函数使用错误，参考web3.js手册</p>
+<pre tabindex="0"><code>index.js:297 Uncaught (in promise) Error: Returned values aren't valid, did it run Out of Gas? You might also see this error if you are not using the correct ABI for the contract you are retrieving data from, requesting data from a block number that does not exist, or querying a node which is not fully synced.
+</code></pre><p>demo文件参考webstorm中的petshop项目</p>
+
+
+    
+
+
+                    
+                    <div class="row"><div class="position-relative mx-auto col-lg-9">
+                          <div class="bg-primary overflow-hidden p-3 mt-5 shadow">
+
+    <h4 class="text-white text-center">Read more</h4>
+
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/mystudy/2021-10-12javascript%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/" title="2021-10-12javascript核心原理笔记"><i class="fas fa-chevron-left p-1"></i>2021-10-12javascript核心原理笔记</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/mystudy/2021-10-11%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" title="hugo文档管理工具">hugo文档管理工具<i class="fas fa-chevron-right p-1"></i></a>
+    </div>
+</div>
+
+
+                        </div></div> 
+
+                </div>
+
+            </div> 
+
+        </div> 
+<script src="https://heheiscool.github.io/lib/jquery.min.js"></script> 
+<script src="https://heheiscool.github.io/lib/popper.min.js"></script> 
+
+<script src="https://heheiscool.github.io/js/bootstrap.min.js"></script> 
+
+
+<script type="text/javascript" src="/plugins/lunr.min.js"></script>
+<script type="text/javascript" src="/plugins/auto-complete.js"></script>
+<link href="/plugins/auto-complete.css" rel="stylesheet">
+<script type="text/javascript">
+  
+      var baseurl = "https:\/\/heheiscool.github.io\/";
+  
+</script>
+<script type="text/javascript" src="/plugins/search.js"></script>
+
+
+<script type="text/javascript" src="/plugins/clipboard.js"></script>
+<script>
+  new ClipboardJS('.btn');
+</script>
+</body>
+</html>
