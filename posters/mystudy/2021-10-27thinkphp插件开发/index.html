@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="canonical" href="https://heheiscool.github.io/posters/getting-started/usage/">
+    <link rel="canonical" href="https://heheiscool.github.io/posters/mystudy/2021-10-27thinkphp%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/">
 
     <title>
         
-        Usage | Material Docs
+        2021-10-24thinkphp插件开发 | Material Docs
         
     </title>
 
@@ -55,7 +55,7 @@
         
         <a class="nav-link p-0" href="/posters/"><h6>Ace documentation</h6></a>
         <ul class="list-unstyled ml-2">
-    <li data-nav-id="/posters/getting-started/" class="nav-item my-1 parent haschildren
+    <li data-nav-id="/posters/getting-started/" class="nav-item my-1 haschildren
         ">
         
         <a class="nav-link p-0" href="/posters/getting-started/"><h6>Getting started</h6></a>
@@ -66,7 +66,7 @@
                     Installation
                 </a>
         </li>
-        <li data-nav-id="/posters/getting-started/usage/" class="nav-item my-1 active">
+        <li data-nav-id="/posters/getting-started/usage/" class="nav-item my-1">
                 
                  <a href="/posters/getting-started/usage/" class="nav-link p-0">
                     Usage
@@ -140,7 +140,7 @@
         </li>
         </ul>
     </li>
-    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 haschildren
+    <li data-nav-id="/posters/mystudy/" class="nav-item my-1 parent haschildren
         ">
         
         <a class="nav-link p-0" href="/posters/mystudy/"><h6>hugo文档管理工具</h6></a>
@@ -193,7 +193,7 @@
                     2021-10-24python编译器Jupyter
                 </a>
         </li>
-        <li data-nav-id="/posters/mystudy/2021-10-27thinkphp%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/" class="nav-item my-1">
+        <li data-nav-id="/posters/mystudy/2021-10-27thinkphp%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/" class="nav-item my-1 active">
                 
                  <a href="/posters/mystudy/2021-10-27thinkphp%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/" class="nav-link p-0">
                     2021-10-24thinkphp插件开发
@@ -252,229 +252,92 @@
 
 </div>
                 <div class="docs-toc large order-lg-2 order-md-0 order-xs-1 col-12 col-lg-2 col-xl-2 position-sticky border-left"><div class="docs-toc">
-	<nav id="TableOfContents">
-  <ul>
-    <li><a href="#starting--building-the-site">Starting &amp; building the site</a>
-      <ul>
-        <li><a href="#development-server">Development server</a></li>
-        <li><a href="#building-for-production">Building for production</a></li>
-      </ul>
-    </li>
-    <li><a href="#creating-content">Creating content</a>
-      <ul>
-        <li><a href="#markdown">Markdown</a></li>
-        <li><a href="#file-structure">File structure</a></li>
-        <li><a href="#file-contents">File contents</a></li>
-        <li><a href="#navigation-bar-menu">Navigation bar menu</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+	<nav id="TableOfContents"></nav>
 </div>
 </div>
                 <div class="main col-12 order-1 col-md-9 col-lg-10 col-xl-8 py-3">
                 
 
-<h1>Usage</h1>
-
-<p class="lead">
-    With the site created and the theme installed, it&rsquo;s time to run the server and create content.
-</p>
-
-<h2 id="starting--building-the-site">Starting &amp; building the site</h2>
-<h3 id="development-server">Development server</h3>
-<p>To start the site for development mode, execute the following command while in your <!-- raw HTML omitted -->/docs<!-- raw HTML omitted --> folder:
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_0f412bc0e8">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_0f412bc0e8">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-hugo server
-
-</code></pre></div>
-    </div>
-</div>
-
-
-
-
-This will start a server on your localhost that will live-update with any changes you make to your site.</p>
-<p>For more Hugo commands visit <!-- raw HTML omitted --><a href="https://gohugo.io/commands/">https://gohugo.io/commands/</a><!-- raw HTML omitted --></p>
-<h3 id="building-for-production">Building for production</h3>
-<p>To build the site for your production environment, as in, to serve it to your users through a web server, execute the following command. This will create a folder <!-- raw HTML omitted -->/docs/public<!-- raw HTML omitted --> with all the necessary files, compiled to HTML.</p>
-<p><!-- raw HTML omitted -->Be sure the site&rsquo;s configuration in <!-- raw HTML omitted -->config.toml<!-- raw HTML omitted --> is complete, including the <!-- raw HTML omitted -->baseURL = &ldquo;https://yourdomain.com/&quot;<!-- raw HTML omitted --> value to properly load stylesheets and other resources.
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_17d1e5a3cc">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_17d1e5a3cc">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-hugo
-
-</code></pre></div>
-    </div>
-</div>
-
-
-
-</p>
-<h2 id="creating-content">Creating content</h2>
-<h3 id="markdown">Markdown</h3>
-<p>Pages are written in Markdown and files defining pages should end with <em>.md</em>. For more information on how to use Markdown, search for tutorials on the internet or use this <!-- raw HTML omitted -->cheatsheet<!-- raw HTML omitted -->.</p>
-<h3 id="file-structure">File structure</h3>
-<p>Ace looks at your file structure and automatically turns it into a menu.
-The structure looks as follows:
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_a33eb667c8">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_a33eb667c8">
-    <pre tabindex="0"><code class="language-<nil>" data-lang="<nil>">
-/content
-├── _index.md
-├── page-top.md
-└── /level-one
-    ├── _index.md
-    ├── page-1-one.md
-    ├── page-1-two.md
-    └── /level-two
-        ├── _index.md
-        ├── page-2-one.md
-        ├── page-2-two.md
-        └── /level-three
-            ├── _index.md
-            ├── page-3-one.md
-            ├── page-3-two.md
-            └── /level-four
-                ├── page-4-one.md
-                └── page-4-two.md
-
-</code></pre>
-    </div>
-</div>
-
-
-
-</p>
-<p>Your &lsquo;homepage&rsquo; for every level is the <!-- raw HTML omitted -->_index.md<!-- raw HTML omitted --> file. Subpages (like <!-- raw HTML omitted -->page-1-one.md<!-- raw HTML omitted -->) are automatically added as child pages in the menu.</p>
-<p>An exception exists for the top level files. <!-- raw HTML omitted -->/content/_index.md<!-- raw HTML omitted --> is your homepage, and any other page files in the <!-- raw HTML omitted -->/content<!-- raw HTML omitted --> folder are not automatically added in the menu. Instead, they can be accessed manually through their URL (<!-- raw HTML omitted -->yourdomain.com/page-title<!-- raw HTML omitted -->).</p>
-<h3 id="file-contents">File contents</h3>
-<p>Every file should start by defining the title and weight of the page. This can be done by adding the following text to the top of your page file.
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_6e8a780593">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_6e8a780593">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
-+++
-title = &#34;Usage&#34;
-description = &#34;&#34;
-weight = 2
-+++
-
-</code></pre></div>
-    </div>
-</div>
-
-
-
-
-The title will be displayed as a H1 header at the top of your page. The weight determines the order in the menu.</p>
-<p>After that you may write the content you desire with Markdown. You may use shortcodes to add some more &lsquo;advanced&rsquo; layout features to the page, such as code highlighting, a &lsquo;lead&rsquo; style paragraph, images, video&rsquo;s, and more.</p>
-<h3 id="navigation-bar-menu">Navigation bar menu</h3>
-<p>While the left sidebar navigation is automatically populated by the file structure described above, and the right &lsquo;table of contents&rsquo; sidebar menu is automatically populated by the headings defined on a page, the top navigation bar needs to be configured manually.
-<!-- raw HTML omitted -->
-This can be done in the <!-- raw HTML omitted -->config.toml<!-- raw HTML omitted --> file, by adding the following lines:
-
-
-
-
-
-
-    
-    
-
-
-
-
-<div class="position-relative">
-    <div class="position-absolute" style="right:0;">
-        <button class="btn btn-light" data-clipboard-target="#clipboard_8a261965fe">
-        Copy
-        </button>
-    </div>
-    <div id="clipboard_8a261965fe">
-    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">
-[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">shortcuts</span>]]
-<span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;&lt;i class=&#39;fab fa-github&#39;&gt;&lt;/i&gt;&#34;</span>
-<span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;https://github.com/vantagedesign/ace-documentation&#34;</span>
-<span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span>
-
-</code></pre></div>
-    </div>
-</div>
-
-
-
-</p>
-<p>This example will create a GitHub icon that links to that URL. Instead of an icon, you may also use text, or both.</p>
+<h1>2021-10-24thinkphp插件开发</h1>
+
+<h1 id="简要说明插件开发流程">简要说明插件开发流程</h1>
+<p>发布于 2020-02-06 12:45:31</p>
+<p>一、开发流程
+1.生成插件
+A、命令行方式：（php think addon -a myaddon -c create）
+B、使用“插件开发”插件来生成，经过实践发现这种方式比命令行方式生成的更全面。
+C、手动写代码：如果不嫌麻烦就采用这个，但虽然麻烦你会知道涉及到了哪些代码与文件夹，最好是采用前两种方式生成之后看一下有哪些代码变动了。</p>
+<p>2.配置插件：
+A、手动配置
+插件启动配置：application/extra/addons.php
+插件基础配置：插件文件info.ini
+插件扩展配置：插件文件夹中的config.php
+B、通过“插件开发”插件来配置</p>
+<p>3.创建数据库</p>
+<p>4.可手动创建，也可在后台一键CURL （在创建CRUL之前创建数据表。插件后端在application编辑、调试，之后移到插件对应文件夹。插件前端在插件的controller、model、view编辑、调试）。</p>
+<pre tabindex="0"><code>php think crud -t test
+</code></pre><p>这里“-t”参数指定你要生成的数据表（可以不用写前缀名）</p>
+<p>常用参数
+-c, &ndash;controller[=CONTROLLER] 生成的控制器名,可选,默认根据表名进行自动解析
+-m, &ndash;model[=MODEL] 生成的模型名,可选,默认根据表名进行自动解析
+-i, &ndash;fields[=FIELDS] 生成的数据列表中可见的字段，默认是全部
+-d, &ndash;delete[=DELETE] 删除模式,将删除之前使用CRUD命令生成的相关文件</p>
+<p><a href="https://www.fastadmin.net/demo.html">演示</a>
+<img src="https://cdn.fastadmin.net/uploads/20201114/e21ebd007a33a68c4e2ffe50b27e030b.jpg" alt="14.jpg">
+A,自定义控制器名:webqi/classify表示curd生成的文件到webqi的目录下，但是测试只有控制器、视图文件到了对应的文件夹，其它的都没有成功。
+B,自定义模型名:classify 表示设置模型的名称为classify
+C,生成之后在这些文件夹下有文件：
+application/admin/controller/webqi/ （测试成功）
+application/admin/model/webqi/ （没到二级文件夹）
+application/admin/view/webqi/ （测试成功）
+application/admin/validate/webqi/（没到二级文件夹）
+public/assets/js/backend/webqi/ （测试成功）
+都只是生成后台管理的文件，其它地方没有生成文件。
+需要手动修改命名空间的设置及文件位置，就算修改“自定义控制器名”为&quot;/webqi/classify&quot;等方式也没有成功，不知道是不是因为php版本的原因。手动修改命名空间之后就成功了。命令行删除模式也没有成功，需要手动删除。
+D,如果数据库带下划线，如user_exams，则可以如下方式生成curd
+<img src="https://cdn.fastadmin.net/uploads/20201129/91373dbd2093388fe591f806b1a27cb7.jpg" alt="360截图20201129112726273.jpg"></p>
+<p>5.创建菜单
+A、命令行创建</p>
+<pre tabindex="0"><code>php think menu -c test
+</code></pre><p>这里“-c”参数指定控制器
+B、通过“插件开发”插件来配置：通过该插件添加的数据保存在fa_auth_rule表中
+C、手写创建，可以了解到原理。</p>
+<p>6.编写代码</p>
+<p>二、创建行为（不是必须）
+1、在addon目录中创建addon.php类文件创建行为方法
+2、在addon目录中创建行为模板文件
+3、在php类中及view添加钩子来使用行为
+A、php业务：hook(&lsquo;testhook&rsquo;, [&lsquo;id&rsquo;=&gt;1])
+B、模板：<!-- raw HTML omitted -->{:hook(&lsquo;testhook&rsquo;, [&lsquo;id&rsquo;=&gt;1])}<!-- raw HTML omitted --></p>
+<p>yEjKpMprDZ1TIIfMeduj/Q==</p>
+<p>三、打包流程
+1.在插件的根目录的以文件夹名称的php文件中新建install方法，用于生成后台管理菜单：</p>
+<p>2U2QYiCXQQCl9L2tfLUt6w==</p>
+<pre tabindex="0"><code>$menu = [
+        [
+            'name'    =&gt; 'chajian',
+            'title'   =&gt; '自写测试',  //菜单名称
+            'icon'    =&gt; 'fa fa-tasks',
+            'remark'  =&gt; '自写测试',
+            'sublist' =&gt; [
+                ['name' =&gt; 'chajian/index', 'title' =&gt; '查看'],
+                ['name' =&gt; 'chajian/add', 'title' =&gt; '添加'],
+                ['name' =&gt; 'chajian/edit', 'title' =&gt; '编辑 '],
+                ['name' =&gt; 'chajian/del', 'title' =&gt; '删除'],
+                ['name' =&gt; 'chajian/multi', 'title' =&gt; '批量更新'],
+            ]
+        ]
+    ];
+    Menu::create($menu);
+    return true;
+</code></pre><p>2.配置插件文件夹下的insta.sql将之前新建插件数据库的语句粘贴进去（将数据库前缀替换为：<strong>PREFIX</strong>）
+3.将生成的在根目录的文件夹（application、public、/public/assets/addons/插件/）复制到插件文件夹（application、public、assets）。
+4.php think addon -a example -c package 压缩插件包 在根目录的runtime-&gt;addons文件夹
+5.打包完成</p>
+<p>四、参考资料
+<a href="https://doc.fastadmin.net/doc/">https://doc.fastadmin.net/doc/</a> 官方<a href="https://doc.fastadmin.net/docs/">文档</a>
+<a href="https://doc.fastadmin.net/developer">https://doc.fastadmin.net/developer</a> 开发<a href="https://doc.fastadmin.net/docs/">文档</a>
+<a href="https://ask.fastadmin.net/article/323.html">https://ask.fastadmin.net/article/323.html</a> 一张图解析FastAdmin中的表格列表的功能</p>
 
 
     
@@ -486,8 +349,8 @@ This can be done in the <!-- raw HTML omitted -->config.toml<!-- raw HTML omitte
 
     <h4 class="text-white text-center">Read more</h4>
 
-    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/getting-started/installation/" title="Installation"><i class="fas fa-chevron-left p-1"></i>Installation</a>
-        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/configuration/" title="Configuration">Configuration<i class="fas fa-chevron-right p-1"></i></a>
+    <div class="d-flex justify-content-center"><a class="p-1 mr-3 d-inline-block text-white" href="/posters/mystudy/2021-10-29python%E7%BC%96%E8%BE%91%E5%99%A8jupyter/" title="2021-10-24python编译器Jupyter"><i class="fas fa-chevron-left p-1"></i>2021-10-24python编译器Jupyter</a>
+        <a class="p-1 ml-3 d-inline-block text-white text-right" href="/posters/mystudy/2021-11-04javascript-react02%E7%BC%96%E7%A8%8B/" title="2021-11-07javascript-react快速入门">2021-11-07javascript-react快速入门<i class="fas fa-chevron-right p-1"></i></a>
     </div>
 </div>
 
